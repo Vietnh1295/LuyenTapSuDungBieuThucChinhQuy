@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var regExp=/[a,e,o,i,u,A,E,O,I,U]/;
+    var Str=prompt('');
+    var count=0;
+    for(var i=0; i<Str.length;i++)
+    {
+        if(regExp.test(Str[i]))
+        {
+            count++;
+        }
+    }
+    alert('chuoi co '+count+' nguyen am');
+</script>
+</body>
+</html>

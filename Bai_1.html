@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var regExp=/\d\d\/\d\d\/\d\d\d\d/;
+    var date=prompt('');
+    function kiemtrathang()
+    {
+       switch (parseInt(date.slice(3,5))) {
+           case 1:
+           case 3:
+           case 5:
+           case 7:
+           case 8:
+           case 10:
+           case 12:
+               KiemTraNgay(31);
+               break;
+           case 2:
+               KiemTraNgay(28);
+               break;
+           case 4:
+           case 6:
+           case 9:
+           case 11:
+               KiemTraNgay(30);break;
+           default:
+               return 'Sai thang';
+       }
+
+    }
+    function KiemTraNgay(day) {
+        if(parseInt(date.slice(0,2))<=day)
+        {
+            return 'Dung chuoi';
+        }
+        else
+            {
+                return 'sai ngay';
+            }
+    }
+    alert(regExp.test(date)?kiemtrathang():'Sai Chuoi')
+</script>
+</body>
+</html>
